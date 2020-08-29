@@ -1,0 +1,3 @@
+npm install -g create-nuxt-app
+create-nuxt-app my-first-nuxt-app
+npm run dev

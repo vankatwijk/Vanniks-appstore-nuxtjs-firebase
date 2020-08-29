@@ -1,4 +1,11 @@
-# my-first-nuxt-app
+# Project Title
+
+Bloguxt-Nuxt-Vue
+
+# Project Description
+
+Blog created with Nuxt a second level vue.js framework
+
 
 ## Build Setup
 
@@ -18,4 +25,23 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
-# Bloguxt-Nuxt-Vue
+
+
+## Built With
+
+* [vue.js](https://vuejs.org/) - Javascript frontend framework
+* [Nuxt.js](https://nuxtjs.org) - Second level vue.js framework
+
+## Authors
+
+* **Hendrikus van Katwijk** - [Github](https://github.com/vankatwijk) - [Personal website](https://hpvk.com)
+
+
+## Based on
+
+* **nuxtjs-vuejs-on-steroids** - [udemy](hhttps://www.udemy.com/course/nuxtjs-vuejs-on-steroids)
+
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
