@@ -1,15 +1,42 @@
 <template>
-      <nuxt-link :to="'/posts/'+2" class="post-preview">
+      <nuxt-link :to="'/posts/'+id" class="post-preview">
         <article>
-          <div class="post-thumbnail" style="background-image:url('http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg')"></div>
+          <div
+          class="post-thumbnail"
+          :style="{backgroundImage:'url('+thumbnail+')'}"></div>
           <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview Text</p>
+            <h1>{{ title }}</h1>
+            <p>{{previewText}}</p>
           </div>
         </article>
       </nuxt-link>
 
 </template>
+
+<script>
+export default {
+  name:'PostPreview',
+  props:{
+    id:{
+      type:String,
+      required:true
+    },
+    title:{
+      type:String,
+      required:true
+    },
+    previewText:{
+      type:String,
+      required:true
+    },
+    thumbnail:{
+      type:String,
+      required:true
+    }
+  }
+}
+</script>
+
 
 <style scoped>
 
