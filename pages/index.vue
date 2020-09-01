@@ -3,35 +3,16 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <section class="featured-posts">
-      <PostPreview
-      id="1"
-      thumbnail="http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg"
-      title="Hello there"
-      previewText="This is my first post!"
-      />
-      <PostPreview
-      id="2"
-      thumbnail="http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg"
-      title="Hello there second"
-      previewText="This is my second post!"
-      />
-      <PostPreview
-      id="3"
-      thumbnail="http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg"
-      title="Hello there third"
-      previewText="This is my third post!"
-      />
 
-    </section>
+      <PostList />
   </div>
 </template>
 
 <script>
-import PostPreview from '@/components/Posts/PostPreview'
+import PostList from '@/components/Posts/PostList'
 export default {
   components:{
-    PostPreview
+    PostList
   }
 }
 </script>
