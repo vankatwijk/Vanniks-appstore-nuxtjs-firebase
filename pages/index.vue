@@ -5,7 +5,7 @@
     </section>
 
       <PostList
-      posts="loadedPosts" />
+      :posts="loadedPosts" />
   </div>
 </template>
 

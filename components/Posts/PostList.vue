@@ -3,7 +3,7 @@
       <PostPreview
       v-for="post in posts"
       :key="post.id"
-      id="post.id"
+      :id="post.id"
       :is-admin="isAdmin"
       :thumbnail="post.thumbnail"
       :title="post.title"
@@ -26,7 +26,7 @@ export default {
       },
       posts:{
         type:Array,
-        required:ture
+        required:true
       }
   }
 }
