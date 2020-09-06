@@ -4,7 +4,8 @@
       <h1>Get the latest tech news!</h1>
     </section>
 
-      <PostList />
+      <PostList
+      posts="loadedPosts" />
   </div>
 </template>
 
@@ -13,6 +14,30 @@ import PostList from '@/components/Posts/PostList'
 export default {
   components:{
     PostList
+  },
+  data() {
+    return {
+      loadedPosts:[
+        {
+          id:'1',
+          title:'first Post',
+          previewText:'this is our first post',
+          thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
+        },
+        {
+          id:'2',
+          title:'second Post',
+          previewText:'this is our second post',
+          thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
+        },
+        {
+          id:'3',
+          title:'third Post',
+          previewText:'this is our third post',
+          thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
+        }
+      ]
+    }
   }
 }
 </script>

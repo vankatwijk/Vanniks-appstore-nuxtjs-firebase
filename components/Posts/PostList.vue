@@ -1,25 +1,13 @@
 <template>
     <section class="post-list">
       <PostPreview
-      id="1"
+      v-for="post in posts"
+      :key="post.id"
+      id="post.id"
       :is-admin="isAdmin"
-      thumbnail="http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg"
-      title="Hello there"
-      previewText="This is my first post!"
-      />
-      <PostPreview
-      id="2"
-      :is-admin="isAdmin"
-      thumbnail="http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg"
-      title="Hello there second"
-      previewText="This is my second post!"
-      />
-      <PostPreview
-      id="3"
-      :is-admin="isAdmin"
-      thumbnail="http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg"
-      title="Hello there third"
-      previewText="This is my third post!"
+      :thumbnail="post.thumbnail"
+      :title="post.title"
+      :previewText="post.previewText"
       />
 
     </section>
@@ -33,7 +21,12 @@ export default {
   },
   props:{
       isAdmin:{
-          type:Boolean
+          type:Boolean,
+          default:false
+      },
+      posts:{
+        type:Array,
+        required:ture
       }
   }
 }
