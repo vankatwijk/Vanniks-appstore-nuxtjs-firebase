@@ -11,7 +11,7 @@ const createStore = () => {
       }
     },
     actions: {
-      setPosts(vuexContext) {
+      setPosts(vuexContext,posts) {
         vuexContext.commit('setPosts', posts)
       }
     },
