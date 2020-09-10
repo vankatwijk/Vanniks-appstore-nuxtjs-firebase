@@ -4,7 +4,7 @@ Bloguxt-Nuxt-Vue
 
 # Project Description
 
-Blog created with Nuxt a second level vue.js framework
+Blog created with Nuxt a second level vue.js framework and firebase as a backend api server
 
 
 ## Build Setup
