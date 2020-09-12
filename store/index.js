@@ -9,6 +9,14 @@ const createStore = () => {
     mutations: {
       setPosts(state, posts){
         state.loadedPosts = posts
+      },
+      addPost(state, post){
+        state.loadedPosts.push(post)
+      },
+      editPost(state, editedPost){
+        const postIndex = state.loadedPosts.findIndex(post => post.id)
+
+        state.loadedPosts[postIndex] = editedPost
       }
     },
     actions: {
@@ -22,6 +30,18 @@ const createStore = () => {
           vuexContext.commit('setPosts', postsArray)
         })
         .catch(e => CanvasRenderingContext2D.error(e));
+      },
+      addPost(vuexContext,post) {
+        const createdPost = {...post, updatedDate: new Date()}
+
+        return axios.post('https://nuxt-blog-9ce7f.firebaseio.com/posts.json',createdPost)
+        .then(res => {
+          vuexContext.commit('addPost',{...createdPost,id: res.data.name})
+        })
+        .catch(e => console.log(e))
+      },
+      editPost(vuexContext,editedPosts) {
+
       },
       setPosts(vuexContext,posts) {
         vuexContext.commit('setPosts', posts)
