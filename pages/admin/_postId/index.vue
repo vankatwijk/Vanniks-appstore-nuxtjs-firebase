@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import AdminPostForm from '@/components/Admin/AdminPostForm'
 
 export default {
@@ -24,7 +25,11 @@ export default {
     },
     methods: {
       onSubmitted(editedPost){
-
+          axios.put('https://nuxt-blog-9ce7f.firebaseio.com/posts/' + this.$route.params.postId + '.json',editedPost)
+          .then(res => {
+            this.$router.push("/admin");
+          })
+          .catch(e => console.log(e));
       }
     }
 }
