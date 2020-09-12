@@ -1,6 +1,7 @@
 <template>
     <div class="admin-post-page">
-        <AdminPostForm :post="loadedPost" class="update-form" @submit="onSubmitted" />
+        <AdminPostForm :post="loadedPost"
+        class="update-form" @submit="onSubmitted" />
 
     </div>
 </template>
@@ -15,7 +16,8 @@ export default {
         AdminPostForm
     },
     asyncData(context) {
-      return axios.get('https://nuxt-blog-9ce7f.firebaseio.com/posts/' + context.params.id + '.json')
+      return axios.get('https://nuxt-blog-9ce7f.firebaseio.com/posts/'
+      + context.params.postId + '.json')
       .then(res => {
         return {
           loadedPost : res.data

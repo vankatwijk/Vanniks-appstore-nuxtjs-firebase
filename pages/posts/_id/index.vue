@@ -26,7 +26,7 @@ export default {
       }
     })
     .catch(e => CanvasRenderingContext2D.error(e));
-  },
+  }
 }
 </script>
 
