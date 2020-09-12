@@ -1,6 +1,6 @@
 <template>
     <div class="admin-post-page">
-        <AdminPostForm :post="loadedPost" class="update-form"/>
+        <AdminPostForm :post="loadedPost" class="update-form" @submit="onSubmitted" />
 
     </div>
 </template>
@@ -13,15 +13,19 @@ export default {
     components:{
         AdminPostForm
     },
-    data(){
+    asyncData(context) {
+      return axios.get('https://nuxt-blog-9ce7f.firebaseio.com/posts/' + context.params.id + '.json')
+      .then(res => {
         return {
-            loadedPost:{
-                author:'hendrikus',
-                title:'my awesome post',
-                content: 'super awesome post created for making milk',
-                thumbnailLink: 'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
-            }
+          loadedPost : res.data
         }
+      })
+      .catch(e => CanvasRenderingContext2D.error(e));
+    },
+    methods: {
+      onSubmitted(editedPost){
+
+      }
     }
 }
 </script>

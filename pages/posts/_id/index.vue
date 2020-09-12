@@ -15,21 +15,17 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-  asyncData(context, callback) {
-    setTimeout(() => {
-      callback(null,{
-        loadedPost:{
-          id:'1',
-          title:'first Post (ID: '+context.params.id+')',
-          previewText:'this is our first post',
-          author:'Hendrikus',
-          updatedDate: new Date(),
-          content: 'some dummy text as the content of this block post',
-          thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
-        }
-      })
+  asyncData(context) {
+    return axios.get('https://nuxt-blog-9ce7f.firebaseio.com/posts/' + context.params.id + '.json')
+    .then(res => {
+      return {
+        loadedPost : res.data
+      }
     })
+    .catch(e => CanvasRenderingContext2D.error(e));
   },
 }
 </script>

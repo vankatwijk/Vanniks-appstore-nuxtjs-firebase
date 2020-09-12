@@ -1,4 +1,5 @@
-import Vuex from 'vuex'
+import Vuex from 'vuex';
+import axios from 'axios';
 
 const createStore = () => {
   return new Vuex.Store({
@@ -12,32 +13,15 @@ const createStore = () => {
     },
     actions: {
       nuxtServerInit(vuexContext, centext){
-
-        return new Promise((resolve, reject) => {
-          setTimeout(() => {
-            vuexContext.commit('setPosts', [
-                {
-                  id:'1',
-                  title:'first Post',
-                  previewText:'this is our first post',
-                  thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
-                },
-                {
-                  id:'2',
-                  title:'second Post',
-                  previewText:'this is our second post',
-                  thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
-                },
-                {
-                  id:'3',
-                  title:'third Post',
-                  previewText:'this is our third post',
-                  thumbnail:'http://maltawinds.com/wp-content/uploads/2019/10/tech-skills-640x360.jpeg'
-                }
-              ])
-              resolve();
-          }, 1000);
+        return axios.get('https://nuxt-blog-9ce7f.firebaseio.com/posts.json')
+        .then(res => {
+          const postsArray = []
+          for(const key in res.data){
+            postsArray.push({...res.data[key],id:key})
+          }
+          vuexContext.commit('setPosts', postsArray)
         })
+        .catch(e => CanvasRenderingContext2D.error(e));
       },
       setPosts(vuexContext,posts) {
         vuexContext.commit('setPosts', posts)
