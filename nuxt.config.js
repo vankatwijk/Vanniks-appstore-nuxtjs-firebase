@@ -37,6 +37,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '~/assets/styles/main.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -67,5 +68,14 @@ export default {
   },
   env:{
     baseURL: 'https://nuxt-blog-9ce7f.firebaseio.com'
+  },
+  transition:{
+    name: 'fade',
+    mode: 'out-in'
   }
+  // if your app is in a sub directory
+  // rootDir: '/sub-folder/',
+  // router:{
+  //   base: '/sub-folder/'
+  // }
 }
