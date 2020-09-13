@@ -44,6 +44,7 @@ export default {
   ** https://nuxtjs.org/guide/plugins
   */
   plugins: [
+    '~/plugins/core-components.js'
   ],
   /*
   ** Auto import components
