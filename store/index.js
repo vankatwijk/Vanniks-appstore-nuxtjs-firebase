@@ -41,7 +41,7 @@ const createStore = () => {
         .catch(e => console.log(e))
       },
       editPost(vuexContext,editedPost) {
-        axios.put('https://nuxt-blog-9ce7f.firebaseio.com/posts/'
+        return axios.put('https://nuxt-blog-9ce7f.firebaseio.com/posts/'
         + editedPost.id +
         '.json',editedPost)
         .then(res => {
