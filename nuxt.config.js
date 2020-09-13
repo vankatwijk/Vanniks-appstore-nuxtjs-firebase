@@ -64,5 +64,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  env:{
+    baseURL: 'https://nuxt-blog-9ce7f.firebaseio.com'
   }
 }
