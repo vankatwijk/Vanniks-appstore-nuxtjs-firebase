@@ -74,10 +74,14 @@ export default {
   transition:{
     name: 'fade',
     mode: 'out-in'
+  },
+  router:{
+    middleware: 'log'
   }
   // if your app is in a sub directory
   // rootDir: '/sub-folder/',
   // router:{
-  //   base: '/sub-folder/'
+  //   base: '/sub-folder/',
+  //   middleware: 'log'
   // }
 }

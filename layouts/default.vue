@@ -1,7 +1,7 @@
 <template>
   <div>
     <TheHeader @sidenavToggle="displaySidenav = !displaySidenav"/>
-    <TheSidenav 
+    <TheSidenav
     :show="displaySidenav"
     @close="displaySidenav = false"
     />
@@ -16,6 +16,7 @@ import TheSidenav from '@/components/Navigation/TheSidenav'
 
 
 export default {
+  // middleware:"log",
   components:{
     TheHeader,
     TheSidenav
