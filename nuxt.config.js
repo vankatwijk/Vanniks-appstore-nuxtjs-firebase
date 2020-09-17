@@ -69,7 +69,8 @@ export default {
   build: {
   },
   env:{
-    baseURL: 'https://nuxt-blog-9ce7f.firebaseio.com'
+    baseURL: 'https://nuxt-blog-9ce7f.firebaseio.com',
+    fbAPIKey: 'AIzaSyBLAIYzr0ErYH7JATIIZC_ipH83pVDuHbY'
   },
   transition:{
     name: 'fade',
