@@ -30,14 +30,21 @@ export default {
   },
   methods:{
     onSubmit(){
-      axios.post('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
-      +process.env.fbAPIKey,{
-        email:this.email,
-        password:this.password,
-        returnSecureToken: true
-      }).then(result =>{
-        console.log(result)
-      }).catch(e => console.log(e));
+      let authURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
+        +process.env.fbAPIKey
+
+      if(!this.isLogin){
+        authURL = 'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key='
+        +process.env.fbAPIKey
+      }
+        axios.post(authURL,{
+          email:this.email,
+          password:this.password,
+          returnSecureToken: true
+        }).then(result =>{
+          console.log(result)
+        }).catch(e => console.log(e));
+
     }
   }
 }
