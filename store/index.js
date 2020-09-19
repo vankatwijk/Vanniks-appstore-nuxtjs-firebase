@@ -22,6 +22,9 @@ const createStore = () => {
       },
       setToken(state,token){
         state.token = token
+      },
+      clearToken(state){
+        state.token = null;
       }
     },
     actions: {
@@ -83,10 +86,10 @@ const createStore = () => {
           if(result.status === 200){
             vuexContext.commit('setToken' , result.data.idToken);
             localStorage.setItem('token', result.data.idToken);
-            localStorage.setItem('tokenExpiration', new Date().getTime() + result.data.expiresIn * 1000 );
+            localStorage.setItem('tokenExpiration', new Date().getTime() + +result.data.expiresIn * 1000 );
 
             Cookie.set('jwt',result.data.idToken);
-            Cookie.set('expirationDate',new Date().getTime() + result.data.expiresIn * 1000 )
+            Cookie.set('expirationDate',new Date().getTime() + +result.data.expiresIn * 1000 )
           }
         }).catch(e => console.log(e));
 
@@ -108,13 +111,13 @@ const createStore = () => {
         }else{
           token = localStorage.getItem("token");
           expirationDate = localStorage.getItem("tokenExpiration");
-
-          if(new Date().getTime() > +expirationDate || !token){
-            return;
-          }
-          vuexContext.commit("setToken",token)
         }
-
+        if(new Date().getTime() > +expirationDate || !token){
+          console.log('No token or invalid token')
+          vuexContext.commit("clearToken")
+          return;
+        }
+        vuexContext.commit("setToken",token)
       }
     },
     getters: {
