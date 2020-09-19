@@ -79,7 +79,9 @@ const createStore = () => {
           password: authData.password,
           returnSecureToken: true
         }).then(result => {
-          vuexContext.commit('setToken' , result.idToken)
+          if(result.status === 200){
+            vuexContext.commit('setToken' , result.data.idToken)
+          }
         }).catch(e => console.log(e));
 
       }
