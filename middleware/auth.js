@@ -1,5 +1,8 @@
 export default function(context){
 
-  console.log('[middleware] the log middleware is running')
+  console.log('[Middleware] Auth');
+  if(!context.store.getters.isAuthenticated){
+    context.redirect('/admin/auth')
+  }
 
 }
