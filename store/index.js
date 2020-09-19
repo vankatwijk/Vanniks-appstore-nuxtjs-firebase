@@ -80,10 +80,16 @@ const createStore = () => {
           returnSecureToken: true
         }).then(result => {
           if(result.status === 200){
-            vuexContext.commit('setToken' , result.data.idToken)
+            vuexContext.commit('setToken' , result.data.idToken);
+            vuexContext.dispatch('setLogoutTimer',result.data.expiresIn * 1000 )
           }
         }).catch(e => console.log(e));
 
+      },
+      setLogoutTimer(duration){
+        setTimeout(()=>{
+          vuexContext.commit('clearToken')
+        },duration)
       }
     },
     getters: {
