@@ -1,3 +1,4 @@
+const bodyParser = require('body-parser')
 
 export default {
   /*
@@ -78,7 +79,11 @@ export default {
   },
   router:{
     middleware: 'log'
-  }
+  },
+  serverMiddleware: [
+    bodyParser.json(),
+    '~/api'
+  ]
   // if your app is in a sub directory
   // rootDir: '/sub-folder/',
   // router:{
