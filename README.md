@@ -39,7 +39,11 @@ For detailed explanation on how things work, check out [Nuxt.js docs](https://nu
 
 ## Based on
 
-* **nuxtjs-vuejs-on-steroids** - [udemy](hhttps://www.udemy.com/course/nuxtjs-vuejs-on-steroids)
+* **nuxtjs-vuejs-on-steroids** - [udemy](https://www.udemy.com/course/nuxtjs-vuejs-on-steroids)
+
+* **firebase deply blog** - [medium](https://medium.com/likecoin/quick-nuxt-js-ssr-prototyping-with-firebase-cloud-functions-5277553610a8)
+
+* **firebase deploy video** - [youtube](https://www.youtube.com/watch?v=_aTvdnqY3ek&t=1s&ab_channel=M.A.MuhaiminSakib)
 
 
 ## License
