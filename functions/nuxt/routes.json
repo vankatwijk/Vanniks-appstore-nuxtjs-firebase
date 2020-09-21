@@ -1,0 +1,58 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/about/index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_7acf011e"
+  },
+  {
+    "name": "admin",
+    "path": "/admin",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/admin/index.vue",
+    "chunkName": "pages/admin/index",
+    "_name": "_f056d340"
+  },
+  {
+    "name": "posts",
+    "path": "/posts",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/posts/index.vue",
+    "chunkName": "pages/posts/index",
+    "_name": "_546339e4"
+  },
+  {
+    "name": "admin-auth",
+    "path": "/admin/auth",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/admin/auth/index.vue",
+    "chunkName": "pages/admin/auth/index",
+    "_name": "_4f0c688d"
+  },
+  {
+    "name": "admin-new-post",
+    "path": "/admin/new-post",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/admin/new-post/index.vue",
+    "chunkName": "pages/admin/new-post/index",
+    "_name": "_44412f5c"
+  },
+  {
+    "name": "admin-postId",
+    "path": "/admin/:postId",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/admin/_postId/index.vue",
+    "chunkName": "pages/admin/_postId/index",
+    "_name": "_1bec0b8b"
+  },
+  {
+    "name": "posts-id",
+    "path": "/posts/:id",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/posts/_id/index.vue",
+    "chunkName": "pages/posts/_id/index",
+    "_name": "_1184c2cf"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/home/hendrikus/Repo/Bloguxt-Nuxt-Vue/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_2e6525a0"
+  }
+]
