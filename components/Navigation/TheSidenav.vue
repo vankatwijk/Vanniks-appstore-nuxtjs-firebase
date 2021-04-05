@@ -14,6 +14,22 @@
         <li class="nav-item"><nuxt-link to="/posts">Blog</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
+
+        
+        <li class="nav-item"><a href="category/business">games</a></li>
+        <li class="nav-item"><a href="category/business">tools</a></li>
+        <li class="nav-item"><a href="category/business">social</a></li>
+        <li class="nav-item"><a href="category/business">news</a></li>
+        <li class="nav-item"><a href="category/business">shopping</a></li>
+        <li class="nav-item"><a href="category/business">food</a></li>
+        <li class="nav-item"><a href="category/business">lifestyle</a></li>
+        <li class="nav-item"><a href="category/business">business</a></li>
+        <li class="nav-item"><a href="category/business">music</a></li>
+        <li class="nav-item"><a href="category/business">sports</a></li>
+        <li class="nav-item"><a href="category/business">education</a></li>
+        <li class="nav-item"><a href="category/business">travel</a></li>
+        <li class="nav-item"><a href="category/business">entertainment</a></li>
+        <li class="nav-item"><a href="category/business">reference</a></li>
       </ul>
     </div>
   </transition>

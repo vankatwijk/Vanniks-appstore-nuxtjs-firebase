@@ -2,9 +2,9 @@
   <div class="single-post-page">
     <section>
       <h1 class="post-title"></h1>
-      <div class="post-details" >
-          <div class="post-detail">{{ loadedApp.title}}</div>
-          <div class="post-detail">{{loadedApp.description}}</div>
+      <div class="post-details" v-for="(app, key) in loadedApps" :key="key">
+          <a :href="'/category/'+ category +'/'+app.reference"><div class="post-detail">{{ app.title}}</div>
+          <div class="post-detail">{{app.description}}</div></a>
       </div>
     </section>
     <section class="post-feedback">
@@ -18,10 +18,11 @@ import axios from 'axios';
 
 export default {
   asyncData(context) {
-    return axios.get(process.env.baseURL + '/apps/' + context.params.id + '.json')
+    return axios.get(process.env.baseURL + '/apps/' + context.params.category + '.json')
     .then(res => {
       return {
-        loadedApp : res.data
+        loadedApps : res.data,
+        category : context.params.id
       }
     })
     .catch(e => CanvasRenderingContext2D.error(e));
