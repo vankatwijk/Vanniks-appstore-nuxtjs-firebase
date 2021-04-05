@@ -14,5 +14,7 @@
     "js-cookie": "^2.2.1",
     "nuxt": "^2.14.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.11.3"
+  }
 }

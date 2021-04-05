@@ -1,10 +1,10 @@
 # Project Title
 
-Bloguxt-Nuxt-Vue
+Vanniks-appstore-nuxtjs-firebase
 
 # Project Description
 
-Blog created with Nuxt a second level vue.js framework and firebase as a backend api server
+App store created with Nuxt a second level vue.js framework and firebase as a backend api server
 
 
 ## Build Setup
