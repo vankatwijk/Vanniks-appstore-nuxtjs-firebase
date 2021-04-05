@@ -16,7 +16,7 @@
         <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
 
 
-        <li class="nav-item"><a href="/category/business">games</a></li>
+        <li class="nav-item"><a href="/category/games">games</a></li>
         <li class="nav-item"><a href="/category/tools">tools</a></li>
         <li class="nav-item"><a href="/category/social">social</a></li>
         <li class="nav-item"><a href="/category/news">news</a></li>

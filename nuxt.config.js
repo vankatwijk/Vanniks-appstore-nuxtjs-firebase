@@ -16,7 +16,7 @@ module.exports = {
      ** See https://nuxtjs.org/api/configuration-head
      */
     head: {
-        title: 'HPVK' || '',
+        title: 'Vanniks - Appstore' || '',
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -57,6 +57,9 @@ module.exports = {
      ** Nuxt.js dev-modules
      */
     buildModules: [
+
+        '@nuxtjs/pwa',
+
         // Simple usage
         '@nuxtjs/vuetify',
 
