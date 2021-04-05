@@ -2,13 +2,35 @@
   <div class="single-post-page">
     <section>
       <h1 class="post-title"></h1>
-      <div class="post-details" v-for="(app, key) in loadedApps" :key="key">
-          <a :href="'/category/'+ category +'/'+app.reference"><div class="post-detail">{{ app.title}}</div>
-          <div class="post-detail">{{app.description}}</div></a>
-      </div>
+
+      <v-container>
+        <v-row>
+          <v-col
+            cols="12"
+            sm="4" 
+            v-for="(app, key) in loadedApps" 
+            :key="key"
+          >
+
+          <a :href="'/category/'+ category +'/'+app.reference">
+          <v-row class="app-card">
+            <v-col cols="4">
+              <img :src="app.img" height="50px"/>
+            </v-col>
+            <v-col cols="8">
+              <div class="post-title">{{ app.title}}</div>
+              <div class="post-detail">{{app.description}}</div>
+            </v-col>
+          </v-row>
+          </a>
+
+          </v-col>
+        </v-row>
+      </v-container>
+
     </section>
     <section class="post-feedback">
-      <p>Let me know what you think about the post,send mail to<a href="mailto:feedback@someemail.com">feedback@someemail.com</a></p>
+      <p>Do you need an App or custom CRM / CMS build, contact us <a href="mailto:hendrikus@vanniks.com">info@vanniks.com</a></p>
     </section>
   </div>
 </template>
@@ -22,7 +44,7 @@ export default {
     .then(res => {
       return {
         loadedApps : res.data,
-        category : context.params.id
+        category : context.params.category
       }
     })
     .catch(e => CanvasRenderingContext2D.error(e));
@@ -51,6 +73,8 @@ export default {
 
 .post-title {
   margin: 0;
+  justify-content: left;
+  align-items: left;
 }
 
 .post-details {
@@ -58,8 +82,8 @@ export default {
   box-sizing: border-box;
   border-bottom: 3px solid #ccc;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   flex-direction: column;
 }
 
@@ -82,5 +106,8 @@ export default {
 .post-feedback a:hover,
 .post-feedback a:active {
   color: salmon;
+}
+.app-card{
+  border:1px solid black
 }
 </style>

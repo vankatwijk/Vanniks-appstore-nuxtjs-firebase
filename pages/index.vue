@@ -5,20 +5,20 @@
     </section>
 
 
-        <li class="nav-item"><a href="category/business">games</a></li>
-        <li class="nav-item"><a href="category/business">tools</a></li>
-        <li class="nav-item"><a href="category/business">social</a></li>
-        <li class="nav-item"><a href="category/business">news</a></li>
-        <li class="nav-item"><a href="category/business">shopping</a></li>
-        <li class="nav-item"><a href="category/business">food</a></li>
-        <li class="nav-item"><a href="category/business">lifestyle</a></li>
-        <li class="nav-item"><a href="category/business">business</a></li>
-        <li class="nav-item"><a href="category/business">music</a></li>
-        <li class="nav-item"><a href="category/business">sports</a></li>
-        <li class="nav-item"><a href="category/business">education</a></li>
-        <li class="nav-item"><a href="category/business">travel</a></li>
-        <li class="nav-item"><a href="category/business">entertainment</a></li>
-        <li class="nav-item"><a href="category/business">reference</a></li>
+        <li class="nav-item"><a href="/category/business">games</a></li>
+        <li class="nav-item"><a href="/category/tools">tools</a></li>
+        <li class="nav-item"><a href="/category/social">social</a></li>
+        <li class="nav-item"><a href="/category/news">news</a></li>
+        <li class="nav-item"><a href="/category/shopping">shopping</a></li>
+        <li class="nav-item"><a href="/category/food">food</a></li>
+        <li class="nav-item"><a href="/category/lifestyle">lifestyle</a></li>
+        <li class="nav-item"><a href="/category/business">business</a></li>
+        <li class="nav-item"><a href="/category/music">music</a></li>
+        <li class="nav-item"><a href="/category/sports">sports</a></li>
+        <li class="nav-item"><a href="/category/education">education</a></li>
+        <li class="nav-item"><a href="/category/travel">travel</a></li>
+        <li class="nav-item"><a href="/category/entertainment">entertainment</a></li>
+        <li class="nav-item"><a href="/category/reference">reference</a></li>
 
       <!--PostList
       :posts="loadedPosts" /-->

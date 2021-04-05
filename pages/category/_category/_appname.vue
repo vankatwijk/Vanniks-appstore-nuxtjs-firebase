@@ -8,7 +8,7 @@
       </div>
     </section>
     <section class="post-feedback">
-      <p>Let me know what you think about the post,send mail to<a href="mailto:feedback@someemail.com">feedback@someemail.com</a></p>
+      <p>Do you need an App or custom CRM / CMS build, contact us <a href="mailto:hendrikus@vanniks.com">info@vanniks.com</a></p>
     </section>
   </div>
 </template>
