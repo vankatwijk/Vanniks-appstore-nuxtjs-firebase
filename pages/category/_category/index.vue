@@ -53,9 +53,23 @@ export default {
 </script>
 
 <style scoped>
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:active {
+  text-decoration: none;
+}
 .single-app-page {
   padding: 30px;
-  text-align: center;
   box-sizing: border-box;
 }
 
@@ -74,6 +88,7 @@ export default {
   margin: 0;
   justify-content: left;
   align-items: left;
+  font-size: 16;
 }
 
 .app-details {
@@ -110,5 +125,9 @@ export default {
 .app-card{
   height:100px;
   overflow: hidden;
+  margin:5px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: #f9f9f9;
 }
 </style>

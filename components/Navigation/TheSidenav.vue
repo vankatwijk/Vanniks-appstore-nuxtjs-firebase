@@ -75,6 +75,7 @@ export default {
   left: 0;
   box-sizing: border-box;
   padding: 30px;
+  overflow:auto;
 }
 
 .slide-side-enter-active,
@@ -90,6 +91,7 @@ export default {
   list-style: none;
   padding: 0;
   margin: 0;
+  overflow:auto;
 }
 
 .nav-item {

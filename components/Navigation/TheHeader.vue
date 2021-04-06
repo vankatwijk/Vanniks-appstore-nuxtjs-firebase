@@ -1,3 +1,5 @@
+
+
 <template>
 <div class="header-container">
   <header class="the-header">
@@ -13,7 +15,10 @@
         <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
       </ul>
     </div>
-    <div class="navigation-items">
+
+  </header>
+
+      <div class="navigation-items">
       <ul class="nav-list">
         <li class="nav-item"><a href="/category/games">games</a></li>
         <li class="nav-item"><a href="/category/tools">tools</a></li>
@@ -31,7 +36,7 @@
         <li class="nav-item"><a href="/category/reference">reference</a></li>
       </ul>
     </div>
-  </header>
+    
 </div>
 </template>
 
