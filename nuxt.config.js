@@ -57,14 +57,8 @@ module.exports = {
      ** Nuxt.js dev-modules
      */
     buildModules: [
-
-        '@nuxtjs/pwa',
-
         // Simple usage
-        '@nuxtjs/vuetify',
-
-        // With options
-        ['@nuxtjs/vuetify', { /* module options */ }]
+        '@nuxtjs/vuetify'
     ],
     /*
      ** Nuxt.js modules
