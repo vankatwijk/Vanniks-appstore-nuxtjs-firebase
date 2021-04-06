@@ -1,24 +1,28 @@
 
 
 <template>
-<div class="header-container">
-  <header class="the-header">
-    <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
-    <div class="logo">
-      <nuxt-link to="/">Vanniks - Appstore</nuxt-link>
-    </div>
-    <div class="spacer"></div>
-    <div class="navigation-items">
-      <ul class="nav-list">
-        <li class="nav-item"><nuxt-link to="/posts">Blog</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
-        <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
-      </ul>
-    </div>
+<div>
+      <div class="header-container">
+        <header class="the-header">
+          <TheSideNavToggle @toggle="$emit('sidenavToggle')" />
+          <div class="logo">
+            <nuxt-link to="/">Vanniks - Appstore</nuxt-link>
+          </div>
+          <div class="spacer"></div>
+          <div class="navigation-items">
+            <ul class="nav-list">
+              <li class="nav-item"><nuxt-link to="/posts">Blog</nuxt-link></li>
+              <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
+              <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
+            </ul>
+          </div>
 
-  </header>
+        </header>
 
-      <div class="navigation-items">
+          
+      </div>
+
+      <div class="navigation-items lowlist">
       <ul class="nav-list">
         <li class="nav-item"><a href="/category/games">games</a></li>
         <li class="nav-item"><a href="/category/tools">tools</a></li>
@@ -36,8 +40,7 @@
         <li class="nav-item"><a href="/category/reference">reference</a></li>
       </ul>
     </div>
-    
-</div>
+    </div>
 </template>
 
 <script>
@@ -53,6 +56,11 @@ export default {
 
 
 <style scoped>
+.lowlist {
+  overflow: auto;
+  color: black;
+  background: green;
+}
 .header-container {
   height: 60px;
 }
