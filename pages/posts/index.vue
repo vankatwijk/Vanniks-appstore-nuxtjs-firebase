@@ -2,7 +2,7 @@
   <div class="posts-page">
     <section class="post-list">
       <PostList
-      :posts="loadedPosts" />
+      :posts="loadedApps" />
     </section>
   </div>
 </template>
@@ -10,12 +10,12 @@
 <script>
 export default {
   computed:{
-    loadedPosts(){
-      return this.$store.getters.loadedPosts
+    loadedApps(){
+      return this.$store.getters.loadedApps
     }
   },
   created() {
-    this.$store.dispatch('setPosts',this.loadedPosts)
+    this.$store.dispatch('setPosts',this.loadedApps)
   }
 }
 </script>

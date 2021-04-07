@@ -13,15 +13,35 @@
           >
 
           <NuxtLink :to="'/category/'+ category +'/'+app.reference">
-          <v-row class="app-card ma-5" style="background-color:lightgrey;" :go="'/category/'+ category +'/'+app.reference">
-            <v-col cols="4">
-              <img :src="app.img" height="50px"/>
-            </v-col>
-            <v-col cols="8">
-              <div class="app-title">{{ app.title}}</div>
-              <div class="app-detail">{{app.description}}</div>
-            </v-col>
-          </v-row>
+
+          <v-card class="ma-5" max-width="300" outlined :go="'/category/'+ category +'/'+app.reference">
+            <v-list-item three-line>
+
+              <v-list-item-avatar tile size="80" color="yellow">
+                <img :src="app.img"
+                  height="50px" />
+              </v-list-item-avatar>
+
+              <v-list-item-content>
+                <div class="overline mb-4">
+                  {{category}}
+                </div>
+                <v-list-item-title class="headline mb-1">
+                  {{ app.title}}
+                </v-list-item-title>
+                <v-list-item-subtitle>{{app.description}}</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+
+            <v-card-actions>
+              <v-btn outlined rounded text>
+                View
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+
+
+
           </NuxtLink>
           </v-col>
         </v-row>
@@ -122,12 +142,5 @@ a:active {
 .app-feedback a:active {
   color: salmon;
 }
-.app-card{
-  height:100px;
-  overflow: hidden;
-  margin:5px;
-  border-radius: 10px;
-  font-size: 12px;
-  background-color: #f9f9f9;
-}
+
 </style>
