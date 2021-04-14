@@ -1,6 +1,7 @@
 <template>
   <div class="single-app-page">
-    <section>
+    <v-container>
+        <section>
 
     <!-- <div class="slider-container">
         <div class="scrollmenu">
@@ -43,6 +44,8 @@
     <section class="app-feedback">
       <p>Do you need an App or custom CRM / CMS build, contact us <a href="mailto:hendrikus@vanniks.com">info@vanniks.com</a></p>
     </section>
+    </v-container>
+
   </div>
 </template>
 
