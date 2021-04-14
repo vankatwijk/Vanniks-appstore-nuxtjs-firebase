@@ -1,6 +1,18 @@
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .2s;
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity .2s;
 }
-.fade-enter, .fade-leave-to{
-  opacity: 0;
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0;
+}
+
+.app-card {
+    height: 100px;
+    overflow: hidden;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    background-color: #f9f9f9;
 }

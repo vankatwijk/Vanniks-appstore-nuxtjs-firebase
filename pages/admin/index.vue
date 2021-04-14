@@ -7,7 +7,7 @@
         <section class="existing-posts">
             <h1>Existing Posts</h1>
             <PostList :isAdmin="true"
-            :posts="loadedPosts" />
+            :posts="loadedApps" />
         </section>
     </div>
 </template>
@@ -17,13 +17,13 @@ export default {
   layout:'admin',
   middleware: ['check-auth','auth'],
   computed:{
-    loadedPosts(){
-      return this.$store.getters.loadedPosts
+    loadedApps(){
+      return this.$store.getters.loadedApps
     }
   },
   methods:{
     onLogout(){
-      this.$store.getters.loadedPosts;
+      this.$store.getters.loadedApps;
       this.$router.push('/admin/auth');
     }
   }

@@ -14,7 +14,8 @@
         <li class="nav-item"><nuxt-link to="/posts">Blog</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/about">About</nuxt-link></li>
         <li class="nav-item"><nuxt-link to="/admin">Admin</nuxt-link></li>
-
+        
+        <br>
 
         <li class="nav-item"><a href="/category/games">games</a></li>
         <li class="nav-item"><a href="/category/tools">tools</a></li>

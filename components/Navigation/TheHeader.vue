@@ -59,7 +59,7 @@ export default {
 .lowlist {
   overflow: auto;
   color: black;
-  background: green;
+  background: #009688;
 }
 .header-container {
   height: 60px;
